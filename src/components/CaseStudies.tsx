@@ -210,6 +210,7 @@ const CaseStudies: React.FC = () => {
         <div className="relative w-full pt-10 px-6 md:px-20 lg:px-24 z-20 shrink-0 text-center">
              <div className="max-w-[1440px] mx-auto">
                 <span className="text-primary text-xs font-bold uppercase tracking-widest mb-2 block">Selected Work</span>
+                <h2 className="text-4xl md:text-5xl font-semibold text-white">
                 Design thoughtful. <span className="text-gray-500">Deliver useful.</span>
                 </h2>
             </div>

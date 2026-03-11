@@ -29,24 +29,24 @@ const CTA: React.FC = () => {
 
               <div className="flex flex-col md:flex-row items-center justify-center gap-6">
                   <a
-                    href="https://x.com/thebuggeddev"
+                    href="https://www.linkedin.com/in/omowumioladosu/"
                     target="_blank"
                     rel="noreferrer"
                     className="group relative px-12 py-5 bg-white text-black text-lg font-bold rounded-full overflow-hidden transition-transform duration-300 hover:scale-105 shadow-[0_0_50px_rgba(255,255,255,0.2)]"
                   >
                     <div className="absolute inset-0 bg-gradient-to-r from-gray-100 to-white opacity-0 group-hover:opacity-100 transition-opacity"></div>
                     <span className="relative z-10 flex items-center gap-2">
-                      Say hello on X
+                      Say hello on LinkedIn
                     </span>
                   </a>
                   
                   <a
-                    href="https://github.com/thebuggeddev"
+                    href="https://www.behance.net/omowumioladosu"
                     target="_blank"
                     rel="noreferrer"
                     className="text-white/70 hover:text-white font-medium text-lg transition-colors px-6 py-4 flex items-center gap-2"
                   >
-                    <span className="border-b border-transparent hover:border-white/50 pb-0.5 transition-all">See GitHub</span>
+                    <span className="border-b border-transparent hover:border-white/50 pb-0.5 transition-all">See Behance</span>
                   </a>
               </div>
           </motion.div>

@@ -1,6 +1,8 @@
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform, MotionValue } from "framer-motion";
 
+const MotionDiv = motion.div as any;
+
 // --- Visual 1: Network (Glass Cluster) ---
 const NetworkVisual = ({ scrollProgress }: { scrollProgress: MotionValue<number> }) => {
   // Parallax Movements
@@ -19,21 +21,21 @@ const NetworkVisual = ({ scrollProgress }: { scrollProgress: MotionValue<number>
        <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(255,215,0,0.03)_0%,transparent_50%)]"></div>
 
        {/* Connection Lines (SVG Background) */}
-       <svg className="absolute inset-0 w-full h-full pointer-events-none z-0 opacity-30">
+       <svg viewBox="0 0 100 100" preserveAspectRatio="none" className="absolute inset-0 w-full h-full pointer-events-none z-0 opacity-30">
            <motion.path 
-             d="M50% 50% L75% 30%" 
+             d="M50 50 L75 30" 
              stroke="url(#lineGrad)" 
-             strokeWidth="2" 
-             strokeDasharray="6 6"
+             strokeWidth="0.5" 
+             strokeDasharray="2 2"
              initial={{ pathLength: 0, opacity: 0 }}
              whileInView={{ pathLength: 1, opacity: 1 }}
              transition={{ duration: 1.5 }}
            />
            <motion.path 
-             d="M50% 50% L25% 70%" 
+             d="M50 50 L25 70" 
              stroke="url(#lineGrad)" 
-             strokeWidth="2" 
-             strokeDasharray="6 6"
+             strokeWidth="0.5" 
+             strokeDasharray="2 2"
              initial={{ pathLength: 0, opacity: 0 }}
              whileInView={{ pathLength: 1, opacity: 1 }}
              transition={{ duration: 1.5, delay: 0.2 }}
@@ -50,7 +52,7 @@ const NetworkVisual = ({ scrollProgress }: { scrollProgress: MotionValue<number>
        <div className="relative w-[340px] h-[340px] z-10">
            
            {/* Card 2: Peer (Top Right) */}
-           <motion.div 
+           <MotionDiv 
              style={{ y: yPeer, rotate: rotatePeer, x: 80, scale: 0.85 }}
              className="absolute top-0 right-0 w-[220px] h-[160px] rounded-3xl bg-gradient-to-br from-[#1e1b4b] to-[#312e81] border border-white/10 shadow-2xl p-5 flex flex-col justify-between backdrop-blur-md opacity-90 z-0 origin-bottom-left"
            >
@@ -58,19 +60,19 @@ const NetworkVisual = ({ scrollProgress }: { scrollProgress: MotionValue<number>
                    <div className="w-8 h-8 rounded-full bg-indigo-500/30 flex items-center justify-center text-indigo-200 text-xs border border-indigo-400/20">AK</div>
                    <div className="flex flex-col">
                        <span className="text-[10px] text-indigo-200 font-bold uppercase tracking-wider">Peer</span>
-                       <span className="text-white text-xs font-medium">Code Review</span>
+                       <span className="text-white text-xs font-medium">Design Review</span>
                    </div>
                </div>
                <div className="text-white/80 text-sm leading-tight">
-                   How would you structure this hook
+                   How would you structure this flow?
                </div>
                <div className="w-full h-1 bg-white/10 rounded-full overflow-hidden">
                    <div className="w-2/3 h-full bg-indigo-400 rounded-full"></div>
                </div>
-           </motion.div>
+           </MotionDiv>
 
            {/* Card 3: Mentor (Bottom Left) */}
-           <motion.div 
+           <MotionDiv 
              style={{ y: yMentor, rotate: rotateMentor, x: -60, scale: 0.85 }}
              className="absolute bottom-0 left-0 w-[220px] h-[160px] rounded-3xl bg-gradient-to-br from-[#3b0764] to-[#581c87] border border-white/10 shadow-2xl p-5 flex flex-col justify-between backdrop-blur-md opacity-90 z-0 origin-top-right"
            >
@@ -82,16 +84,16 @@ const NetworkVisual = ({ scrollProgress }: { scrollProgress: MotionValue<number>
                    </div>
                </div>
                <div className="text-white/80 text-sm leading-tight">
-                   Refactor this into a reusable component
+                   Refactor this into a design system component
                </div>
                <div className="flex -space-x-2">
                    <div className="w-5 h-5 rounded-full bg-purple-400 border border-[#3b0764]"></div>
                    <div className="w-5 h-5 rounded-full bg-purple-300 border border-[#3b0764]"></div>
                </div>
-           </motion.div>
+           </MotionDiv>
 
            {/* Card 1: Main Hub (Center) */}
-           <motion.div 
+           <MotionDiv 
              style={{ y: yMain, rotate: rotateMain }}
              className="absolute inset-0 m-auto w-[260px] h-[260px] rounded-[2.5rem] bg-gradient-to-br from-[#f59e0b] to-[#d97706] shadow-[0_20px_50px_rgba(245,158,11,0.3)] border border-white/20 p-8 flex flex-col justify-between backdrop-blur-xl z-20"
            >
@@ -104,10 +106,10 @@ const NetworkVisual = ({ scrollProgress }: { scrollProgress: MotionValue<number>
                {/* Content */}
                <div className="mt-2">
                    <h3 className="text-3xl font-serif font-bold text-white leading-none mb-2">
-                       Build <br/> Studio
+                       Design <br/> Studio
                    </h3>
                    <p className="text-white/80 text-xs">
-                       Sprint 04 UI Systems
+                       Sprint 04 Design Systems
                    </p>
                </div>
 
@@ -125,13 +127,13 @@ const NetworkVisual = ({ scrollProgress }: { scrollProgress: MotionValue<number>
                    </div>
                    <div className="w-full h-10 bg-black/20 rounded-full flex items-center px-4 gap-2 backdrop-blur-sm cursor-pointer hover:bg-black/30 transition-colors">
                        <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                       <span className="text-xs font-medium text-white">Join Standup</span>
+                       <span className="text-xs font-medium text-white">Join Review</span>
                    </div>
                </div>
 
                {/* Gloss Overlay */}
                <div className="absolute inset-0 rounded-[2.5rem] bg-gradient-to-br from-white/30 to-transparent pointer-events-none"></div>
-           </motion.div>
+           </MotionDiv>
 
        </div>
 
@@ -160,26 +162,26 @@ const ArchiveVisual = ({ scrollProgress }: { scrollProgress: MotionValue<number>
              <div className="absolute inset-0 bg-gradient-to-bl from-[#0e0e11] via-[#16161d] to-[#0e0e11]"></div>
              
              {/* Container for the stack */}
-             <motion.div style={{ y }} className="relative w-[320px] h-[320px]">
+             <MotionDiv style={{ y }} className="relative w-[320px] h-[320px]">
                 
                 {/* Bottom Card - Purple */}
-                <motion.div 
+                <MotionDiv 
                     style={{ rotate: rotate3, x: x3, scale: 0.9 }}
                     className="absolute inset-0 rounded-[2.5rem] bg-gradient-to-br from-[#c084fc] to-[#e879f9] shadow-2xl opacity-60 flex flex-col p-8 justify-end origin-bottom-right border border-white/10"
                 >
                      <div className="h-14 w-full bg-white/20 backdrop-blur-md rounded-full"></div>
-                </motion.div>
+                </MotionDiv>
 
                 {/* Middle Card - Green */}
-                <motion.div 
+                <MotionDiv 
                     style={{ rotate: rotate2, x: x2, scale: 0.95 }}
                     className="absolute inset-0 rounded-[2.5rem] bg-gradient-to-br from-[#34d399] to-[#2dd4bf] shadow-2xl opacity-80 flex flex-col p-8 justify-end origin-bottom-center border border-white/10"
                 >
                      <div className="h-14 w-full bg-white/20 backdrop-blur-md rounded-full"></div>
-                </motion.div>
+                </MotionDiv>
 
                 {/* Top Card - Blue - Main UI */}
-                <motion.div 
+                <MotionDiv 
                     style={{ rotate: rotate1, x: x1 }}
                     className="absolute inset-0 rounded-[2.5rem] bg-gradient-to-br from-[#3b82f6] to-[#0ea5e9] shadow-[0_30px_60px_-10px_rgba(14,165,233,0.4)] flex flex-col p-8 text-white border border-white/10"
                 >
@@ -193,12 +195,12 @@ const ArchiveVisual = ({ scrollProgress }: { scrollProgress: MotionValue<number>
 
                     {/* Title */}
                     <h3 className="text-3xl font-bold leading-[1.15] mb-auto font-serif">
-                        What are you <br/> shipping <br/> today
+                        What are you <br/> designing <br/> today?
                     </h3>
 
                     {/* Button */}
                     <div className="w-full h-14 bg-white/20 hover:bg-white/30 backdrop-blur-md rounded-full flex items-center justify-between px-6 transition-colors cursor-pointer group border border-white/10">
-                        <span className="font-semibold text-white/90 text-sm">Ship Update</span>
+                        <span className="font-semibold text-white/90 text-sm">Update Design</span>
                         <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                         </svg>
@@ -206,9 +208,9 @@ const ArchiveVisual = ({ scrollProgress }: { scrollProgress: MotionValue<number>
 
                     {/* Gradient Overlay for Gloss */}
                     <div className="absolute inset-0 rounded-[2.5rem] bg-gradient-to-br from-white/20 to-transparent pointer-events-none"></div>
-                </motion.div>
+                </MotionDiv>
 
-             </motion.div>
+             </MotionDiv>
         </div>
     );
 };
@@ -219,12 +221,12 @@ const HeritageScroll: React.FC = () => {
   const section2Ref = useRef<HTMLElement>(null);
 
   const { scrollYProgress: scrollProgress1 } = useScroll({
-    target: section1Ref,
+    target: section1Ref as any,
     offset: ["start end", "end start"]
   });
 
   const { scrollYProgress: scrollProgress2 } = useScroll({
-    target: section2Ref,
+    target: section2Ref as any,
     offset: ["start end", "end start"]
   });
 
@@ -274,7 +276,7 @@ const HeritageScroll: React.FC = () => {
               A Design <br /> <span className="text-blue-400 italic">Evolution</span>
             </h2>
             <p className="text-gray-400 text-lg leading-relaxed max-w-md mb-8">
-               Each design is documented and each prototype is refined with clear handoff notes for developers.
+               Each design is documented and each prototype is refined with clear handoff notes for implementation.
             </p>
             <a href="#work" className="flex items-center gap-4 text-sm text-blue-400 hover:underline group">
               Browse projects

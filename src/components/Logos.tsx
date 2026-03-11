@@ -3,9 +3,9 @@ import React from "react";
 const Logos: React.FC = () => {
   return (
     <div className="flex items-center gap-8 opacity-60 grayscale mix-blend-screen">
-      <LogoItem text="React" />
-      <LogoItem text="Three.js" />
-      <LogoItem text="TypeScript" />
+      <LogoItem text="Figma" />
+      <LogoItem text="Illustrator" />
+      <LogoItem text="FigJam" />
     </div>
   );
 };
