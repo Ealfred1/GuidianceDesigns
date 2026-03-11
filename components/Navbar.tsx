@@ -9,7 +9,7 @@ const Navbar: React.FC = () => {
           {/* Logo */}
           <div className="flex items-center h-full">
             <a href="#home" className="text-xl font-medium tracking-tight text-[#9F99E5]">
-              The Bugged Dev
+              Omowumi Oladosu
             </a>
           </div>
 
