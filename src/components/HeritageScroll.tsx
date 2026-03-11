@@ -221,12 +221,12 @@ const HeritageScroll: React.FC = () => {
   const section2Ref = useRef<HTMLElement>(null);
 
   const { scrollYProgress: scrollProgress1 } = useScroll({
-    target: section1Ref as any,
+    target: section1Ref,
     offset: ["start end", "end start"]
   });
 
   const { scrollYProgress: scrollProgress2 } = useScroll({
-    target: section2Ref as any,
+    target: section2Ref,
     offset: ["start end", "end start"]
   });
 
