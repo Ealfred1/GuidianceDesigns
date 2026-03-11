@@ -123,16 +123,16 @@ const App: React.FC = () => {
         <footer className="w-full py-12 bg-background relative z-20">
              <div className="max-w-[1440px] mx-auto border-dashed-custom-h mb-12"></div>
              {/* Updated padding to md:px-20 */}
-             <div className="max-w-[1440px] mx-auto px-6 md:px-20 lg:px-24 flex flex-col md:flex-row justify-between items-center text-text-muted text-sm">
-                 <div>&copy; {new Date().getFullYear()} The Bugged Dev. All rights reserved.</div>
-                 <div className="flex gap-6 mt-4 md:mt-0">
-                    <a href="#home" className="hover:text-white transition-colors">Home</a>
-                    <a href="#work" className="hover:text-white transition-colors">Work</a>
-                    <a href="#stack" className="hover:text-white transition-colors">Stack</a>
-                    <a href="https://x.com/thebuggeddev" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">X</a>
-                    <a href="https://github.com/thebuggeddev" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">GitHub</a>
-                 </div>
-             </div>
+               <div className="max-w-[1440px] mx-auto px-6 md:px-20 lg:px-24 flex flex-col md:flex-row justify-between items-center text-text-muted text-sm">
+                  <div>&copy; {new Date().getFullYear()} Omowumi Oladosu. All rights reserved.</div>
+                  <div className="flex gap-6 mt-4 md:mt-0">
+                     <a href="#home" className="hover:text-white transition-colors">Home</a>
+                     <a href="#work" className="hover:text-white transition-colors">Work</a>
+                     <a href="https://www.behance.net/omowumioladosu" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">Behance</a>
+                     <a href="https://dribbble.com/Wumi_Oladosu" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">Dribbble</a>
+                     <a href="https://www.linkedin.com/in/omowumioladosu/" target="_blank" rel="noreferrer" className="hover:text-white transition-colors">LinkedIn</a>
+                  </div>
+               </div>
         </footer>
       </div>
     </div>

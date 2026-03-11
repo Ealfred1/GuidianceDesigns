@@ -20,16 +20,16 @@ declare global {
 }
 
 const COINS = [
-  { name: "React", icon: "https://cdn.simpleicons.org/react/ffffff" },
-  { name: "Three.js", icon: "https://cdn.simpleicons.org/threedotjs/ffffff" },
-  { name: "TypeScript", icon: "https://cdn.simpleicons.org/typescript/ffffff" },
-  { name: "Node.js", icon: "https://cdn.simpleicons.org/nodedotjs/ffffff" },
-  { name: "Next.js", icon: "https://cdn.simpleicons.org/nextdotjs/ffffff" },
-  { name: "GSAP", icon: "https://cdn.simpleicons.org/greensock/ffffff" },
-  { name: "Framer", icon: "https://cdn.simpleicons.org/framer/ffffff" },
-  { name: "React Native", icon: "https://cdn.simpleicons.org/react/ffffff" },
-  { name: "Tailwind CSS", icon: "https://cdn.simpleicons.org/tailwindcss/ffffff" },
-  { name: "Docker", icon: "https://cdn.simpleicons.org/docker/ffffff" },
+  { name: "Figma", icon: "https://cdn.simpleicons.org/figma/ffffff" },
+  { name: "Adobe Illustrator", icon: "https://cdn.simpleicons.org/adobeillustrator/ffffff" },
+  { name: "FigJam", icon: "https://cdn.simpleicons.org/figma/ffffff" },
+  { name: "Miro", icon: "https://cdn.simpleicons.org/miro/ffffff" },
+  { name: "Canva", icon: "https://cdn.simpleicons.org/canva/ffffff" },
+  { name: "Trello", icon: "https://cdn.simpleicons.org/trello/ffffff" },
+  { name: "Google Analytics", icon: "https://cdn.simpleicons.org/googleanalytics/ffffff" },
+  { name: "Mixpanel", icon: "https://cdn.simpleicons.org/mixpanel/ffffff" },
+  { name: "User Research", icon: "https://cdn.simpleicons.org/googlesearchconsole/ffffff" },
+  { name: "Design Systems", icon: "https://cdn.simpleicons.org/storybook/ffffff" },
 ];
 
 const Coin: React.FC<{
@@ -219,10 +219,10 @@ const TokenRing: React.FC = () => {
                 <span className="text-[10px] font-mono text-primary uppercase tracking-widest">Core Stack</span>
              </div>
             <h3 id="header-transliterate" className="text-white text-4xl md:text-6xl font-bold leading-tight tracking-tight drop-shadow-2xl">
-              Build <span className="text-primary">Immersive</span> Experiences
+              Design <span className="text-primary">Meaningful</span> Experiences
             </h3>
             <p className="text-gray-400 text-sm md:text-base font-mono uppercase tracking-widest mt-6 drop-shadow-md max-w-xl mx-auto">
-              React Next.js TypeScript Node Three.js
+              Figma Illustrator FigJam Miro Canva
             </p>
         </div>
         

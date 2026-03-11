@@ -2,10 +2,10 @@ import React from "react";
 import { motion } from "framer-motion";
 
 const features = [
-  { name: "Interactive Web Apps", role: "Product", description: "Responsive interfaces with clean state flows and polished interactions.", imageColor: "bg-[#4338ca]" },
-  { name: "Three Dimensional Scenes", role: "Experience", description: "Real time visuals and WebGL moments that feel smooth and alive.", imageColor: "bg-[#be185d]" },
-  { name: "Motion Systems", role: "Animation", description: "Scroll linked motion and micro interactions powered by GSAP and Framer Motion.", imageColor: "bg-[#059669]" },
-  { name: "Backend Foundations", role: "Platform", description: "Node and Express services with clear APIs and durable patterns.", imageColor: "bg-[#d97706]" },
+  { name: "UX Research", role: "Product", description: "Deep diving into user needs through surveys, interviews, and data analysis to inform design.", imageColor: "bg-[#4338ca]" },
+  { name: "UI Design", role: "Experience", description: "Creating pixel-perfect interfaces that are visually stunning and highly functional.", imageColor: "bg-[#be185d]" },
+  { name: "Design Systems", role: "Scalability", description: "Building robust design systems that ensure consistency and speed up development.", imageColor: "bg-[#059669]" },
+  { name: "Interaction Design", role: "Movement", description: "Crafting intuitive micro-interactions and animations that enhance the user journey.", imageColor: "bg-[#d97706]" },
 ];
 
 const Team: React.FC = () => {
@@ -17,9 +17,9 @@ const Team: React.FC = () => {
         {/* Header */}
         <div className="mb-20 max-w-2xl">
            <span className="text-primary text-xs font-bold uppercase tracking-widest mb-4 block">Capabilities</span>
-           <h2 className="text-4xl md:text-5xl font-semibold text-white mb-6">What I Build</h2>
+           <h2 className="text-4xl md:text-5xl font-semibold text-white mb-6">Design Capabilities</h2>
            <p className="text-text-muted text-base leading-relaxed">
-             A quick look at the product and engineering work I love to ship.
+             A look at the product design and UX research work I love to lead.
            </p>
         </div>
 

@@ -240,13 +240,13 @@ const HeritageScroll: React.FC = () => {
               Process
             </span>
             <h2 className="text-4xl md:text-6xl font-serif font-medium text-white mb-6 drop-shadow-2xl">
-              A Calm <br /> <span className="text-[#ffd700] italic">Build Flow</span>
+              A Human <br /> <span className="text-[#ffd700] italic">Design Flow</span>
             </h2>
             <p className="text-gray-400 text-lg leading-relaxed max-w-md mb-8">
-              I work in quick cycles that keep feedback clear and momentum steady from prototype to release.
+              I work in iterative cycles that prioritize user needs and business goals from research to prototyping.
             </p>
             <a href="#contact" className="flex items-center gap-4 text-sm text-[#ffd700] hover:underline group">
-              Start a build
+              Start a project
             </a>
          </div>
 
@@ -271,13 +271,13 @@ const HeritageScroll: React.FC = () => {
               Delivery
             </span>
             <h2 className="text-4xl md:text-6xl font-serif font-medium text-white mb-6 drop-shadow-2xl">
-              A Release <br /> <span className="text-blue-400 italic">Journal</span>
+              A Design <br /> <span className="text-blue-400 italic">Evolution</span>
             </h2>
             <p className="text-gray-400 text-lg leading-relaxed max-w-md mb-8">
-               Each release is documented and each prototype becomes a reusable module with clear notes.
+               Each design is documented and each prototype is refined with clear handoff notes for developers.
             </p>
             <a href="#work" className="flex items-center gap-4 text-sm text-blue-400 hover:underline group">
-              Browse releases
+              Browse projects
             </a>
          </div>
 
