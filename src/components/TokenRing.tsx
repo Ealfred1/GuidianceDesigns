@@ -1,30 +1,41 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const COINS = [
-  { name: "Figma", icon: "https://cdn.simpleicons.org/figma/ffffff" },
-  { name: "Adobe Illustrator", icon: "https://cdn.simpleicons.org/adobeillustrator/ffffff" },
-  { name: "Miro", icon: "https://cdn.simpleicons.org/miro/ffffff" },
-  { name: "Canva", icon: "https://cdn.simpleicons.org/canva/ffffff" },
-  { name: "Linear", icon: "https://cdn.simpleicons.org/linear/ffffff" },
-  { name: "Notion", icon: "https://cdn.simpleicons.org/notion/ffffff" },
-  { name: "Slack", icon: "https://cdn.simpleicons.org/slack/ffffff" },
-  { name: "FigJam", icon: "https://cdn.simpleicons.org/figma/ffffff" },
-  { name: "Google", icon: "https://cdn.simpleicons.org/google/ffffff" },
-  { name: "Framer", icon: "https://cdn.simpleicons.org/framer/ffffff" },
+const TOOLS_STACK = [
+  { name: "Figma", icon: "https://cdn.simpleicons.org/figma" },
+  { name: "Claude", icon: "https://cdn.simpleicons.org/anthropic" },
+  { name: "ChatGPT", icon: "https://cdn.simpleicons.org/openai" },
+  { name: "Miro", icon: "https://cdn.simpleicons.org/miro" },
+  { name: "Canva", icon: "https://cdn.simpleicons.org/canva" },
+  { name: "Notion", icon: "https://cdn.simpleicons.org/notion" },
+  { name: "Slack", icon: "https://cdn.simpleicons.org/slack" },
+  { name: "FigJam", icon: "https://cdn.simpleicons.org/figma" },
+  { name: "Google", icon: "https://cdn.simpleicons.org/google" },
+  { name: "Framer", icon: "https://cdn.simpleicons.org/framer" },
 ];
 
 const ToolCard = ({ name, icon }: { name: string, icon: string }) => (
-  <div className="flex-shrink-0 w-32 h-32 md:w-40 md:h-40 mx-4 rounded-3xl bg-white/5 border border-white/10 backdrop-blur-xl flex flex-col items-center justify-center gap-4 hover:bg-white/10 hover:border-primary/30 transition-all duration-500 group relative overflow-hidden">
+  <div className="flex-shrink-0 w-32 h-32 md:w-36 md:h-36 mx-3 rounded-2xl bg-white/5 border border-white/10 backdrop-blur-xl flex flex-col items-center justify-center gap-3 hover:bg-white/10 hover:border-primary/30 transition-all duration-500 group relative overflow-hidden">
     <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-    <img src={icon} alt={name} className="w-10 h-10 md:w-12 md:h-12 object-contain filter brightness-100 group-hover:scale-110 transition-transform duration-500 relative z-10" />
-    <span className="text-[10px] md:text-xs font-bold text-text-muted uppercase tracking-widest relative z-10 group-hover:text-white transition-colors duration-500">{name}</span>
+    <img 
+        src={icon} 
+        alt={name} 
+        onLoad={(e) => (e.currentTarget.style.opacity = "1")}
+        onError={(e) => {
+            // Fallback to unpkg if cdn.simpleicons.org fails
+            const slug = icon.split('/').pop();
+            e.currentTarget.src = `https://unpkg.com/simple-icons@latest/icons/${slug}.svg`;
+        }}
+        style={{ filter: "brightness(0) invert(1)" }}
+        className="w-10 h-10 md:w-12 md:h-12 object-contain group-hover:scale-110 transition-transform duration-500 relative z-10 opacity-80" 
+    />
+    <span className="text-[9px] md:text-[10px] font-bold text-text-muted uppercase tracking-widest relative z-10 group-hover:text-white transition-colors duration-500">{name}</span>
   </div>
 );
 
 const TokenRing = () => {
   // Duplicate icons for seamless loop
-  const duplicatedCoins = [...COINS, ...COINS, ...COINS];
+  const duplicatedTools = [...TOOLS_STACK, ...TOOLS_STACK, ...TOOLS_STACK];
 
   return (
     <section id="stack" className="relative py-32 bg-[#0e0e11] overflow-hidden border-b border-white/5">
@@ -43,39 +54,43 @@ const TokenRing = () => {
         </div>
       </div>
 
-      <div className="relative w-full overflow-hidden flex flex-col gap-8">
-        {/* Row 1: Left to Right */}
-        <div className="flex relative items-center">
-          <motion.div 
-            animate={{ x: [0, -2000] }}
-            transition={{ 
-                duration: 40,
-                repeat: Infinity,
-                ease: "linear"
-            }}
-            className="flex"
-          >
-            {duplicatedCoins.map((coin, i) => (
-              <ToolCard key={`row1-${i}`} {...coin} />
-            ))}
-          </motion.div>
-        </div>
+      <div className="relative w-full flex flex-col gap-12">
+        {/* Main Clipping Container - Centered and matching dashed lines */}
+        <div className="max-w-[1440px] mx-auto w-full px-6 md:px-12 overflow-hidden relative">
+          
+          {/* Row 1: Left to Right */}
+          <div className="flex relative items-center mb-4">
+            <motion.div 
+              animate={{ x: [0, -2000] }}
+              transition={{ 
+                  duration: 45,
+                  repeat: Infinity,
+                  ease: "linear"
+              }}
+              className="flex"
+            >
+              {duplicatedTools.map((tool, i) => (
+                <ToolCard key={`row1-${i}`} {...tool} />
+              ))}
+            </motion.div>
+          </div>
 
-        {/* Row 2: Right to Left */}
-        <div className="flex relative items-center">
-          <motion.div 
-            animate={{ x: [-2000, 0] }}
-            transition={{ 
-                duration: 40,
-                repeat: Infinity,
-                ease: "linear"
-            }}
-            className="flex"
-          >
-            {duplicatedCoins.map((coin, i) => (
-              <ToolCard key={`row2-${i}`} {...coin} />
-            ))}
-          </motion.div>
+          {/* Row 2: Right to Left */}
+          <div className="flex relative items-center">
+            <motion.div 
+              animate={{ x: [-2000, 0] }}
+              transition={{ 
+                  duration: 45,
+                  repeat: Infinity,
+                  ease: "linear"
+              }}
+              className="flex"
+            >
+              {duplicatedTools.map((tool, i) => (
+                <ToolCard key={`row2-${i}`} {...tool} />
+              ))}
+            </motion.div>
+          </div>
         </div>
       </div>
 

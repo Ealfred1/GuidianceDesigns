@@ -120,12 +120,98 @@ const VisualNotes = () => (
   </div>
 );
 
+const VisualGaderly = () => (
+  <div className="w-full h-full relative overflow-hidden flex items-center justify-center bg-[#131318]">
+    <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_1px_1px,#fff_1px,transparent_0)] bg-[length:32px_32px]"></div>
+    <div className="relative z-10 w-full max-w-[280px] flex flex-col gap-4 scale-90 md:scale-100">
+      <div className="bg-[#1E1E26] border border-white/10 rounded-2xl p-4 shadow-2xl transform rotate-[-2deg] group-hover:rotate-0 transition-transform duration-500">
+        <div className="flex items-center gap-3 mb-3">
+          <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-pink-500 to-purple-600 flex items-center justify-center text-white font-bold">G</div>
+          <div>
+            <div className="text-white font-bold text-sm">Gaderly</div>
+            <div className="text-[10px] text-gray-500">Premium Discovery</div>
+          </div>
+        </div>
+        <div className="h-24 w-full bg-black/40 rounded-lg overflow-hidden relative">
+          <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+          <div className="absolute bottom-2 left-2 right-2 flex justify-between items-end">
+            <div className="w-12 h-1.5 bg-white/20 rounded-full"></div>
+            <div className="w-6 h-6 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center">
+              <div className="w-2 h-2 bg-pink-500 rounded-full"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+);
+
+const VisualResQXEcosystem = () => (
+  <div className="w-full h-full relative overflow-hidden flex items-center justify-center bg-[#131318]">
+    <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,#2a2a35_0%,#131318_100%)] opacity-50"></div>
+    <div className="relative z-10 w-full max-w-[320px] grid grid-cols-2 gap-3 scale-75 md:scale-95">
+      <div className="bg-[#1E1E26] border border-white/10 p-3 rounded-xl flex flex-col gap-2 group-hover:-translate-y-2 transition-transform duration-500">
+        <span className="text-[8px] text-primary font-bold uppercase">Mobile App</span>
+        <div className="h-1 w-full bg-primary/20 rounded-full overflow-hidden"><div className="w-2/3 h-full bg-primary"></div></div>
+      </div>
+      <div className="bg-[#1E1E26] border border-white/10 p-3 rounded-xl flex flex-col gap-2 group-hover:translate-y-2 transition-transform duration-500 delay-75">
+        <span className="text-[8px] text-green-500 font-bold uppercase">Pro App</span>
+        <div className="h-1 w-full bg-green-500/20 rounded-full overflow-hidden"><div className="w-1/2 h-full bg-green-500"></div></div>
+      </div>
+      <div className="bg-[#1E1E26] border border-white/10 p-3 rounded-xl flex flex-col gap-2 group-hover:-translate-y-2 transition-transform duration-500 delay-150">
+        <span className="text-[8px] text-orange-500 font-bold uppercase">B2B Desktop</span>
+        <div className="h-1 w-full bg-orange-500/20 rounded-full overflow-hidden"><div className="w-3/4 h-full bg-orange-500"></div></div>
+      </div>
+      <div className="bg-[#1E1E26] border border-white/10 p-3 rounded-xl flex flex-col gap-2 group-hover:translate-y-2 transition-transform duration-500 delay-225">
+        <span className="text-[8px] text-blue-500 font-bold uppercase">Marketing</span>
+        <div className="h-1 w-full bg-blue-500/20 rounded-full overflow-hidden"><div className="w-full h-full bg-blue-500"></div></div>
+      </div>
+    </div>
+  </div>
+);
+
+const VisualScientia = () => (
+  <div className="w-full h-full relative overflow-hidden flex items-center justify-center bg-[#131318]">
+    <div className="absolute w-[500px] h-[500px] bg-indigo-500/5 rounded-full blur-[100px]"></div>
+    <div className="relative z-10 w-full max-w-[280px] scale-90 md:scale-100">
+      <div className="bg-[#1C1C1E] border border-white/10 rounded-2xl p-6 shadow-2xl group-hover:scale-105 transition-transform duration-500">
+        <div className="flex justify-between items-start mb-6">
+          <div className="space-y-1">
+            <div className="text-white font-bold text-lg font-serif">Scientia</div>
+            <div className="text-[10px] text-indigo-400 font-mono tracking-tighter uppercase">Academic OS</div>
+          </div>
+          <div className="w-8 h-8 rounded-lg bg-indigo-500/20 flex items-center justify-center">
+             <div className="w-4 h-4 text-indigo-400 font-bold">∑</div>
+          </div>
+        </div>
+        <div className="space-y-3">
+          {[...Array(3)].map((_, i) => (
+            <div key={i} className="flex gap-2">
+              <div className="w-1.5 h-1.5 rounded-full bg-indigo-500 mt-1"></div>
+              <div className="flex-1 space-y-1">
+                <div className="h-1.5 w-full bg-white/10 rounded-full"></div>
+                {i < 2 && <div className="h-1.5 w-2/3 bg-white/5 rounded-full"></div>}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  </div>
+);
+
 const cases = [
   { 
-    title: "ResQ-X",
-    category: "Mobile App Design",
-    description: "A seamless mobility platform built to simplify Refuel, Rescue and render Fleet assistance for B2C and B2B Users on the go. Impact: 40% faster request flow for users.",
-    Visual: VisualDictionary,
+    title: "Gaderly",
+    category: "Mobile Design",
+    description: "A premium social discovery platform designed for high-end networking and meaningful interactions. Impact: Streamlined discovery engine with a 35% increase in user retention.",
+    Visual: VisualGaderly,
+  },
+  { 
+    title: "ResQ-X Ecosystem",
+    category: "Full Ecosystem",
+    description: "A comprehensive mobility platform encompassing Mobile Apps (User & Pro), a B2B Dashboard, and Marketing Website. Impact: Unified the entire service flow, reducing friction by 40%.",
+    Visual: VisualResQXEcosystem,
   },
   { 
     title: "Social123",
@@ -134,10 +220,10 @@ const cases = [
     Visual: VisualScripts,
   },
   { 
-    title: "ResQ-X B2B",
-    category: "Website Design",
-    description: "A seamless mobility platform built to simplify Fleet assistance for teams. Impact: 60% Faster Response Time and improved coordination.",
-    Visual: VisualCommunity,
+    title: "Scientia",
+    category: "Platform Design",
+    description: "An advanced academic management system designed to simplify complex university workflows and improve student engagement. Impact: Enhanced operational efficiency for faculty.",
+    Visual: VisualScientia,
   },
   { 
     title: "Skillify",

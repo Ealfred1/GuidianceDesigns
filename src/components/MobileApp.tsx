@@ -14,7 +14,7 @@ const MobileApp: React.FC = () => {
                 <div className="flex flex-wrap items-center gap-4 mb-6">
                   <span className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 text-[11px] uppercase tracking-[0.3em] text-white/70">
                     <span className="h-1.5 w-1.5 rounded-full bg-[#7c73ff] shadow-[0_0_10px_rgba(124,115,255,0.8)]"></span>
-                    Omowumi Oladosu
+                    Design Philosophy
                   </span>
                   <span className="text-[11px] font-mono text-white/40">portfolio v2025</span>
                 </div>
@@ -27,7 +27,7 @@ const MobileApp: React.FC = () => {
                 </h2>
 
                 <p className="mt-6 text-lg text-white/70 leading-relaxed max-w-xl">
-                  I am <span className="text-white">Omowumi Oladosu</span>, a product designer crafting meaningful digital experiences.
+                  I am <span className="text-white font-semibold">Omowumi Oladosu</span>, a product designer crafting meaningful digital experiences.
                   This portfolio captures the research, the iterations, and the user-centric systems that bring products to life.
                 </p>
 
@@ -51,74 +51,113 @@ const MobileApp: React.FC = () => {
                     href="https://www.behance.net/omowumioladosu"
                     target="_blank"
                     rel="noreferrer"
-                    className="group relative inline-flex items-center gap-3 rounded-2xl bg-gradient-to-br from-[#7c73ff] via-[#5c53c4] to-[#4338ca] px-6 py-3 text-sm font-semibold text-white shadow-[0_18px_40px_-18px_rgba(88,75,246,0.8)] transition-transform duration-300 hover:-translate-y-1"
+                    className="group relative inline-flex items-center gap-3 rounded-2xl bg-gradient-to-br from-[#7c73ff] via-[#5c53c4] to-[#4338ca] px-8 py-3.5 text-sm font-semibold text-white shadow-[0_18px_40px_-18px_rgba(88,75,246,0.8)] transition-transform duration-300 hover:-translate-y-1"
                   >
-                    <span className="h-2 w-2 rounded-full bg-white"></span>
+                    <span className="h-2 w-2 rounded-full bg-white animate-pulse"></span>
                     Explore Behance
                   </a>
                   <a
                     href="https://www.linkedin.com/in/omowumioladosu/"
                     target="_blank"
                     rel="noreferrer"
-                    className="inline-flex items-center gap-3 rounded-2xl border border-white/15 bg-white/5 px-6 py-3 text-sm font-semibold text-white/80 transition-all duration-300 hover:border-white/35 hover:bg-white/10"
+                    className="inline-flex items-center gap-3 rounded-2xl border border-white/10 bg-white/5 px-8 py-3.5 text-sm font-semibold text-white/80 transition-all duration-300 hover:border-white/30 hover:bg-white/10"
                   >
                     Connect on LinkedIn
                   </a>
                 </div>
               </div>
 
+              {/* Design Log Illustration - Redesigned for premium abstract feel */}
               <div className="relative z-10 flex items-center justify-center px-8 pt-12 pb-12 lg:pt-16 lg:pb-16">
-                <div className="relative w-[320px] md:w-[360px] lg:w-[380px]">
-                  <div className="absolute -top-8 -left-10 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[11px] uppercase tracking-[0.2em] text-white/60 backdrop-blur animate-[float-soft_10s_ease-in-out_infinite]">
-                    Design Log
+                <div className="relative w-[340px] md:w-[380px] lg:w-[400px]">
+                  <div className="absolute -top-10 -left-6 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[11px] uppercase tracking-[0.2em] text-white/60 backdrop-blur-md z-20">
+                    Design Iteration
                   </div>
-                  <div className="absolute -bottom-10 right-4 rounded-full border border-white/10 bg-[rgba(255,255,255,0.06)] px-4 py-2 text-[11px] text-white/60 backdrop-blur animate-[float-soft_11s_ease-in-out_infinite]" style={{ animationDelay: "1.5s" }}>
-                    User Satisfaction 98%
+                  <div className="absolute -bottom-10 right-0 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-[11px] text-white/60 backdrop-blur-md z-20">
+                    94% Efficiency Boost
                   </div>
 
-                  <div className="relative overflow-hidden rounded-[28px] border border-white/10 bg-[#0c0c12] shadow-[0_30px_80px_-30px_rgba(0,0,0,0.9)]">
-                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.08),transparent_65%)]"></div>
-                    <div className="absolute inset-x-0 -top-10 h-24 bg-gradient-to-b from-white/20 to-transparent opacity-50 animate-[scan_7s_linear_infinite]"></div>
+                  {/* Abstract Glass Card Decoration */}
+                  <div className="relative overflow-hidden rounded-[32px] border border-white/10 bg-[#0c0c12] shadow-[0_40px_100px_-40px_rgba(0,0,0,0.9)] aspect-[4/5] flex flex-col p-6">
+                    <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(124,115,255,0.1),transparent_70%)]"></div>
+                    
+                    {/* Abstract Grid Lines */}
+                    <div className="absolute inset-0 opacity-5 pointer-events-none" style={{ backgroundImage: 'linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)', backgroundSize: '40px 40px' }}></div>
 
-                    <div className="relative p-5">
-                      <div className="flex items-center justify-between text-[11px] text-white/40 font-mono">
-                        <span>omowumi.design</span>
-                        <span>iteration log</span>
-                      </div>
+                    {/* Header Area */}
+                    <div className="flex justify-between items-center mb-10 relative z-10">
+                        <div className="flex gap-1.5">
+                            <div className="w-2 h-2 rounded-full bg-red-500/50"></div>
+                            <div className="w-2 h-2 rounded-full bg-yellow-500/50"></div>
+                            <div className="w-2 h-2 rounded-full bg-green-500/50"></div>
+                        </div>
+                        <div className="h-6 w-24 bg-white/5 border border-white/10 rounded-full"></div>
+                    </div>
 
-                      <div className="mt-4 rounded-2xl border border-white/10 bg-[#11121a] p-4">
-                        <div className="flex items-center justify-between text-xs text-white/60">
-                          <span>Design system coverage</span>
-                          <span className="text-white">94%</span>
+                    {/* Progress Visual */}
+                    <div className="space-y-6 mb-10 relative z-10">
+                        <div className="space-y-2">
+                            <div className="flex justify-between text-[10px] uppercase tracking-widest text-white/40">
+                                <span>UX Research</span>
+                                <span className="text-[#7c73ff]">Live</span>
+                            </div>
+                            <div className="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
+                                <div className="h-full w-[85%] bg-gradient-to-r from-[#7c73ff] to-[#5c53c4] rounded-full"></div>
+                            </div>
                         </div>
-                        <div className="mt-3 h-2 rounded-full bg-white/5">
-                          <div className="h-2 w-[94%] rounded-full bg-gradient-to-r from-[#7c73ff] to-[#5c53c4]"></div>
+                        <div className="space-y-2">
+                            <div className="flex justify-between text-[10px] uppercase tracking-widest text-white/40">
+                                <span>IA Architecture</span>
+                                <span>Final</span>
+                            </div>
+                            <div className="h-1.5 w-full bg-white/5 rounded-full overflow-hidden">
+                                <div className="h-full w-[65%] bg-white/20 rounded-full"></div>
+                            </div>
                         </div>
-                        <div className="mt-4 flex justify-between text-[11px] text-white/35">
-                          <span>Research</span>
-                          <span>Wireframe</span>
-                          <span>Prototype</span>
-                        </div>
-                      </div>
+                    </div>
 
-                      <div className="mt-4 rounded-2xl border border-white/10 bg-[#0f1017] p-4 font-mono text-[11px] text-white/70 leading-relaxed">
-                        <div className="text-white/80">const wumiDesigner = {"{"}</div>
-                        <div className="pl-4 text-white/50">focus: "User-centric",</div>
-                        <div className="pl-4 text-white/50">stack: ["Figma", "FigJam"],</div>
-                        <div className="pl-4 text-white/50">status: "Designing solutions"</div>
-                        <div className="text-white/80">{"}"};</div>
-                      </div>
+                    {/* Abstract Node Flow */}
+                    <div className="flex-1 relative border border-white/5 bg-white/5 rounded-2xl p-4 flex flex-col justify-center overflow-hidden">
+                        <div className="absolute top-0 right-0 p-3 opacity-20">
+                            <span className="text-[40px] font-serif italic text-white/50 leading-none">01</span>
+                        </div>
+                        <div className="space-y-3 relative z-10">
+                            <div className="flex items-center gap-3">
+                                <div className="w-5 h-5 rounded border border-[#7c73ff]/50 bg-[#7c73ff]/10 flex items-center justify-center text-[10px] text-[#7c73ff] font-bold">✓</div>
+                                <div className="h-2 w-32 bg-white/10 rounded-full"></div>
+                            </div>
+                            <div className="flex items-center gap-3">
+                                <div className="w-5 h-5 rounded border border-white/20 bg-white/5 flex items-center justify-center text-[10px] text-white/30">•</div>
+                                <div className="h-2 w-40 bg-white/10 rounded-full"></div>
+                            </div>
+                            <div className="flex items-center gap-3">
+                                <div className="w-5 h-5 rounded border border-white/20 bg-white/5 flex items-center justify-center text-[10px] text-white/30">•</div>
+                                <div className="h-2 w-24 bg-white/10 rounded-full"></div>
+                            </div>
+                        </div>
+                        
+                        <div className="absolute bottom-4 right-4 flex gap-1">
+                            {[...Array(4)].map((_, i) => (
+                                <div key={i} className="w-1.5 h-1.5 rounded-full bg-white/20"></div>
+                            ))}
+                        </div>
+                    </div>
 
-                      <div className="mt-5 grid grid-cols-2 gap-3">
-                        <div className="rounded-xl border border-white/10 bg-white/5 px-3 py-3">
-                          <div className="text-[10px] uppercase tracking-[0.2em] text-white/35">user interviews</div>
-                          <div className="mt-2 text-lg font-semibold text-white">12</div>
+                    {/* Status Bottom */}
+                    <div className="mt-8 flex justify-between items-end">
+                        <div className="grid grid-cols-2 gap-4 flex-1">
+                            <div className="space-y-1">
+                                <div className="text-[10px] text-white/30 uppercase tracking-tighter">Velocity</div>
+                                <div className="text-lg font-bold text-white">2.4x</div>
+                            </div>
+                            <div className="space-y-1">
+                                <div className="text-[10px] text-white/30 uppercase tracking-tighter">Accuracy</div>
+                                <div className="text-lg font-bold text-white">99%</div>
+                            </div>
                         </div>
-                        <div className="rounded-xl border border-white/10 bg-white/5 px-3 py-3">
-                          <div className="text-[10px] uppercase tracking-[0.2em] text-white/35">prototypes</div>
-                          <div className="mt-2 text-lg font-semibold text-white">24</div>
+                        <div className="w-10 h-10 rounded-xl bg-[#7c73ff] flex items-center justify-center text-white shadow-[0_0_20px_rgba(124,115,255,0.4)]">
+                            <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M5 13l4 4L19 7" /></svg>
                         </div>
-                      </div>
                     </div>
                   </div>
                 </div>

@@ -81,12 +81,12 @@ void main() {
 
 // Using default font by not specifying a font URL, similar to TokenRing
 const WORDS = [
-    { primary: "Vibe Code", secondary: "AI Apps", label: "Flow" },
-    { primary: "Three JS", secondary: "WebGL Scenes", label: "Spatial" },
-    { primary: "React Stack", secondary: "Type Safe", label: "Frontend" },
-    { primary: "Motion Design", secondary: "GSAP Flow", label: "Animation" },
-    { primary: "Node APIs", secondary: "Fast Builds", label: "Backend" },
-    { primary: "Creative Dev", secondary: "Ship Clean", label: "Craft" },
+    { primary: "Composition", secondary: "Stacks", label: "Grids" },
+    { primary: "Library", secondary: "Components & Variants", label: "Assets" },
+    { primary: "Theming", secondary: "Variables (Design Tokens)", label: "Styles" },
+    { primary: "Systems", secondary: "Auto Layout", label: "Structure" },
+    { primary: "Flows", secondary: "Prototyping", label: "UX" },
+    { primary: "Adaptive", secondary: "Responsive Design", label: "Mobile" },
 ];
 
 interface SliceProps {
