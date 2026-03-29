@@ -34,11 +34,12 @@ const MobileApp: React.FC = () => {
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4, duration: 0.8 }}
-                  className="text-4xl md:text-5xl lg:text-7xl font-serif font-semibold text-white leading-[1.05] tracking-tight max-w-[15ch] md:max-w-none"
+                  className="text-4xl md:text-5xl lg:text-7xl font-serif font-semibold text-white leading-[1.05] tracking-tight max-w-lg"
                 >
                   I research the needs, <br/>
+                  then design <br/>
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-white/90 to-[#7c73ff] pb-2">
-                    then design the soul.
+                    the soul.
                   </span>
                 </motion.h2>
 
