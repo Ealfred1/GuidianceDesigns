@@ -12,6 +12,7 @@ const TOOLS_STACK = [
   { name: "FigJam", icon: "https://cdn.simpleicons.org/figma" },
   { name: "Google", icon: "https://cdn.simpleicons.org/google" },
   { name: "Framer", icon: "https://cdn.simpleicons.org/framer" },
+  { name: "AI", icon: "https://cdn.simpleicons.org/openai" },
 ];
 
 const ToolCard = ({ name, icon }: { name: string, icon: string }) => (

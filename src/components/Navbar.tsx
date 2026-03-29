@@ -32,13 +32,18 @@ const Navbar: React.FC = () => {
             ))}
           </nav>
 
-          {/* CTA */}
           <div className="flex items-center h-full">
             <a
-              href="#contact"
-              className="bg-[#4840BB] hover:bg-[#3f37a8] text-white text-xs font-medium px-5 py-3 rounded-lg transition-colors duration-200"
+              href="mailto:oladosuomowumi4@gmail.com"
+              className="group relative px-6 py-3 bg-button-gradient rounded-sm text-white font-medium text-[11px] uppercase tracking-wider shadow-[0_0_15px_rgba(92,83,196,0.3)] overflow-hidden transition-all duration-300 hover:shadow-[0_0_25px_rgba(92,83,196,0.5)]"
             >
-              Start a Project
+              <div className="absolute inset-0 border border-white/20 rounded-sm group-hover:border-white/40 transition-colors"></div>
+              <span className="relative z-10">Start a Project</span>
+              {/* Corner accents for the button style consistency */}
+              <div className="absolute top-0 left-0 w-1.5 h-1.5 border-t border-l border-white/50 rounded-tl-sm opacity-50"></div>
+              <div className="absolute bottom-0 right-0 w-1.5 h-1.5 border-b border-r border-white/50 rounded-br-sm opacity-50"></div>
+              <div className="absolute top-0 right-0 w-1.5 h-1.5 border-t border-r border-white/50 rounded-tr-sm opacity-50"></div>
+              <div className="absolute bottom-0 left-0 w-1.5 h-1.5 border-b border-l border-white/50 rounded-bl-sm opacity-50"></div>
             </a>
           </div>
         </div>
