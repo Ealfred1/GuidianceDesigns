@@ -44,19 +44,16 @@ export const caseStudies: CaseStudyData[] = [
     approach: "The focus was not to add more features, but to make the existing data easier to understand and act on. I started by restructuring how information is presented, placing the most important metrics at the top and reducing the need for users to dig through heavy tables. Instead of showing everything at once, the interface guides users from a high-level overview into deeper insights. Navigation was simplified to remove unnecessary steps, and visual hierarchy was used to clearly separate primary data from secondary information. Every screen was designed to answer a specific question, rather than just display data.",
     keyScreens: [
       {
-        title: "Dashboard",
-        description: "A clear entry point that surfaces the most important metrics immediately, reducing the need to search for key information.",
-        imageType: "Dashboard Overview"
+        title: "Platform Statistics",
+        description: "A comprehensive overview of key data points, trends, and operational metrics for real-time analysis.",
+        imageType: "Desktop Screen",
+        image: "/projects/scientia/Statistics Page.svg"
       },
       {
-        title: "Report View",
-        description: "Breaks down complex datasets into structured sections, making it easier to scan and interpret.",
-        imageType: "Structured Reports"
-      },
-      {
-        title: "Analytics",
-        description: "Provides deeper insights with visual emphasis, helping users quickly identify trends and patterns.",
-        imageType: "Visual Analytics"
+        title: "Internal Architecture",
+        description: "Detailed visualization of the underlying system structure and data flow patterns.",
+        imageType: "Desktop Screen",
+        image: "/projects/scientia/Inner Bezel.png"
       }
     ],
     designSystem: {

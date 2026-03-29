@@ -177,11 +177,11 @@ const DesktopBentoGrid: React.FC<{ screens: any[] }> = ({ screens }) => {
                   <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-white/20 whitespace-nowrap">Production Environment</span>
                </div>
             </div>
-            <div className="relative rounded-[12px] md:rounded-[24px] overflow-hidden border border-white/5 bg-black/40">
+            <div className="relative rounded-[12px] md:rounded-[24px] overflow-hidden border border-white/5 bg-black/40 max-h-[600px]">
                <img 
                   src={screen.image} 
                   alt={screen.title} 
-                  className="w-full h-auto transition-transform duration-1000 group-hover:scale-[1.005]" 
+                  className="w-full h-auto object-cover object-top transition-transform duration-1000 group-hover:scale-[1.005]" 
                />
             </div>
          </motion.div>
