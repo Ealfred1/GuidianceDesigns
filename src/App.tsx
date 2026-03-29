@@ -14,10 +14,27 @@ import HeritageScroll from "./components/HeritageScroll";
 import CTA from "./components/CTA";
 import MobileApp from "./components/MobileApp";
 import FireGuide from "./components/FireGuide";
+import CaseStudyOverlay from "./components/CaseStudyOverlay";
+import { caseStudies, CaseStudyData } from "./data/caseStudies";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const App: React.FC = () => {
+  const [activeProject, setActiveProject] = React.useState<CaseStudyData | null>(null);
+  const [isOverlayOpen, setIsOverlayOpen] = React.useState(false);
+  const [triggerPoint, setTriggerPoint] = React.useState<{ x: number; y: number } | null>(null);
+
+  const openCaseStudy = (id: string, e: React.MouseEvent) => {
+    const project = caseStudies.find(c => c.id === id);
+    if (project) {
+      setTriggerPoint({ x: e.clientX, y: e.clientY });
+      setActiveProject(project);
+      setIsOverlayOpen(true);
+    }
+  };
+
+  const lenisRef = React.useRef<Lenis | null>(null);
+
   useEffect(() => {
     const lenis = new Lenis({
       autoRaf: false,
@@ -38,12 +55,26 @@ const App: React.FC = () => {
     ScrollTrigger.addEventListener("refresh", onRefresh);
     ScrollTrigger.refresh();
 
+    lenisRef.current = lenis;
+
     return () => {
       ScrollTrigger.removeEventListener("refresh", onRefresh);
       gsap.ticker.remove(onTick);
       lenis.destroy();
     };
   }, []);
+
+  useEffect(() => {
+    if (isOverlayOpen) {
+      lenisRef.current?.stop();
+      document.body.style.overflow = "hidden";
+      document.documentElement.style.overflow = "hidden";
+    } else {
+      lenisRef.current?.start();
+      document.body.style.overflow = "";
+      document.documentElement.style.overflow = "";
+    }
+  }, [isOverlayOpen]);
 
   return (
     <div className="relative w-full min-h-screen bg-background text-white selection:bg-primary selection:text-white overflow-x-hidden font-sans">
@@ -87,7 +118,7 @@ const App: React.FC = () => {
 
         {/* Section 3: Case Studies (Stacked Cards) */}
         <div id="work" className="relative">
-             <CaseStudies />
+             <CaseStudies onOpenCaseStudy={openCaseStudy} />
              {/* Separator */}
              <div className="absolute bottom-0 w-full max-w-[1440px] left-1/2 -translate-x-1/2 border-dashed-custom-h z-20"></div>
         </div>
@@ -135,6 +166,14 @@ const App: React.FC = () => {
                </div>
         </footer>
       </div>
+
+      {/* Case Study Overlay */}
+      <CaseStudyOverlay 
+        project={activeProject}
+        isOpen={isOverlayOpen}
+        onClose={() => setIsOverlayOpen(false)}
+        triggerPoint={triggerPoint}
+      />
     </div>
   );
 };

@@ -202,30 +202,35 @@ const VisualScientia = () => (
 
 const cases = [
   { 
+    id: "gaderly",
     title: "Gaderly",
     category: "Mobile Design",
     description: "A premium social discovery platform designed for high-end networking and meaningful interactions. Impact: Streamlined discovery engine with a 35% increase in user retention.",
     Visual: VisualGaderly,
   },
   { 
+    id: "resq-x-ecosystem",
     title: "ResQ-X Ecosystem",
     category: "Full Ecosystem",
     description: "A comprehensive mobility platform encompassing Mobile Apps (User & Pro), a B2B Dashboard, and Marketing Website. Impact: Unified the entire service flow, reducing friction by 40%.",
     Visual: VisualResQXEcosystem,
   },
   { 
+    id: "social123",
     title: "Social123",
     category: "Web App",
     description: "A social monetization platform that bridges creators and fans through engaging content, paid subscriptions, and community interaction. Impact: Expected 30% reduction in setup time.",
     Visual: VisualScripts,
   },
   { 
+    id: "scientia",
     title: "Scientia",
     category: "Platform Design",
     description: "An advanced academic management system designed to simplify complex university workflows and improve student engagement. Impact: Enhanced operational efficiency for faculty.",
     Visual: VisualScientia,
   },
   { 
+    id: "skillify",
     title: "Skillify",
     category: "Mobile App",
     description: "An interactive learning platform that helps users build real-world skills through curated courses and progress tracking. Impact: More engaging learner experience.",
@@ -233,7 +238,11 @@ const cases = [
   }
 ];
 
-const CaseStudies: React.FC = () => {
+interface CaseStudiesProps {
+  onOpenCaseStudy: (id: string, e: React.MouseEvent) => void;
+}
+
+const CaseStudies: React.FC<CaseStudiesProps> = ({ onOpenCaseStudy }) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
 
@@ -323,7 +332,19 @@ const CaseStudies: React.FC = () => {
                                 <span className="text-[10px] font-mono text-white/70 uppercase tracking-widest group-hover:text-primary transition-colors duration-300">{item.category}</span>
                             </div>
                             <h3 className="text-2xl md:text-4xl font-bold text-white mb-2 md:mb-4 tracking-tight">{item.title}</h3>
-                            <p className="text-gray-400 text-sm md:text-lg leading-relaxed group-hover:text-gray-300 transition-colors duration-300 line-clamp-4 md:line-clamp-none">{item.description}</p>
+                            <p className="text-gray-400 text-sm md:text-lg leading-relaxed group-hover:text-gray-300 transition-colors duration-300 line-clamp-4 md:line-clamp-none mb-8 md:mb-10">{item.description}</p>
+                            
+                            <div className="mt-auto">
+                                <button 
+                                  onClick={(e) => onOpenCaseStudy(item.id, e)}
+                                  className="group/btn relative inline-flex items-center gap-4 overflow-hidden rounded-full bg-white/5 border border-white/10 px-6 py-3 text-sm font-bold text-white transition-all hover:bg-white hover:text-black"
+                                >
+                                    <span className="relative z-10">View Case Study</span>
+                                    <div className="relative z-10 w-8 h-8 rounded-full bg-white/10 flex items-center justify-center group-hover/btn:bg-black/10 transition-colors">
+                                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>
+                                    </div>
+                                </button>
+                            </div>
                         </div>
 
                         {/* Visual Content - Forces h-1/2 on mobile */}
