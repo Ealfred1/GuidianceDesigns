@@ -115,40 +115,40 @@ const BentoMobileGrid: React.FC<{ screens: any[] }> = ({ screens }) => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-4 gap-0 border border-white/10 rounded-[40px] overflow-hidden bg-[#0A0A0B] w-full max-w-[1440px] mx-auto">
        {/* Block 1: Home & Onboarding (2 images) */}
-       <div className="md:col-span-2 border-r border-b md:border-b-0 border-white/10 p-8 md:p-12 flex flex-col justify-between group overflow-hidden">
-          <div className="mb-8">
+       <div className="md:col-span-2 border-r border-b md:border-b-0 border-white/10 p-6 md:p-10 flex flex-col justify-between group overflow-hidden min-h-[500px]">
+          <div className="mb-4">
              <h4 className="text-2xl font-bold text-white mb-2">Home & Onboarding</h4>
              <p className="text-sm text-white/40 max-w-sm leading-relaxed font-light">A seamless entry point designed for speed and clarity in emergency situations.</p>
           </div>
-          <div className="flex gap-6 items-end flex-1 translate-y-4">
+          <div className="flex gap-4 md:gap-8 items-end flex-1 translate-y-8">
              <div className="flex-1 transform transition-all duration-700">
-                <img src={mobileScreens[0].image} alt={mobileScreens[0].title} className="w-full drop-shadow-[0_10px_30px_rgba(0,0,0,0.4)]" />
+                <img src={mobileScreens[0].image} alt={mobileScreens[0].title} className="w-full drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)]" />
              </div>
-             <div className="flex-1 transform translate-y-16 transition-all duration-700 group-hover:translate-y-12">
-                <img src={mobileScreens[1].image} alt={mobileScreens[1].title} className="w-full drop-shadow-[0_10px_30px_rgba(0,0,0,0.4)]" />
+             <div className="flex-1 transform translate-y-12 transition-all duration-1000 group-hover:translate-y-10">
+                <img src={mobileScreens[1].image} alt={mobileScreens[1].title} className="w-full drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)]" />
              </div>
           </div>
        </div>
 
        {/* Block 2: Service Selection */}
-       <div className="p-8 md:p-12 border-r border-b md:border-b-0 border-white/10 flex flex-col justify-between">
-          <div className="mb-6">
+       <div className="p-6 md:p-10 border-r border-b md:border-b-0 border-white/10 flex flex-col justify-between group overflow-hidden min-h-[500px]">
+          <div className="mb-4">
              <h4 className="text-xl font-bold text-white mb-2">Service Selection</h4>
              <p className="text-xs text-white/30 leading-relaxed font-light">{mobileScreens[2]?.description}</p>
           </div>
-          <div className="flex-1 flex items-center justify-center">
-             <img src={mobileScreens[2]?.image} alt={mobileScreens[2]?.title} className="w-full max-h-[300px] object-contain drop-shadow-2xl" />
+          <div className="flex-1 flex items-end justify-center translate-y-8">
+             <img src={mobileScreens[2]?.image} alt={mobileScreens[2]?.title} className="w-full max-w-[280px] object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)] transition-transform duration-1000 group-hover:scale-105" />
           </div>
        </div>
 
        {/* Block 3: Order Flow */}
-       <div className="p-8 md:p-12 border-white/10 flex flex-col justify-between">
-          <div className="mb-6">
+       <div className="p-6 md:p-10 border-white/10 flex flex-col justify-between group overflow-hidden min-h-[500px]">
+          <div className="mb-4">
              <h4 className="text-xl font-bold text-white mb-2">Order Tracking</h4>
              <p className="text-xs text-white/30 leading-relaxed font-light">{mobileScreens[3]?.description}</p>
           </div>
-          <div className="flex-1 flex items-center justify-center">
-             <img src={mobileScreens[3]?.image} alt={mobileScreens[3]?.title} className="w-full max-h-[300px] object-contain drop-shadow-2xl" />
+          <div className="flex-1 flex items-end justify-center translate-y-8">
+             <img src={mobileScreens[3]?.image} alt={mobileScreens[3]?.title} className="w-full max-w-[280px] object-contain drop-shadow-[0_20px_50px_rgba(0,0,0,0.5)] transition-transform duration-1000 group-hover:scale-105" />
           </div>
        </div>
     </div>

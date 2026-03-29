@@ -235,19 +235,28 @@ export const caseStudies: CaseStudyData[] = [
     approach: "The product was designed around one idea: make learning feel active, not repetitive. Instead of focusing only on course consumption, Skillify combines structured learning with progress visibility, gamified motivation, and community interaction. To support this, the experience was built around clear course organization, challenge-based engagement, and a dashboard that makes progress more visible.",
     keyScreens: [
       {
-        title: "Structured Courses",
-        description: "Lessons are organized in a way that supports different learning levels and makes content easier to follow.",
-        imageType: "Course Learning Screen"
+        title: "Learning Dashboard",
+        description: "A centralized hub where students can track their progress, continue lessons, and manage their learning schedule.",
+        imageType: "Mobile Screen",
+        image: "/projects/skillify/Welcome Screen (Bezel).svg"
       },
       {
-        title: "Challenges & Streaks",
-        description: "Daily and weekly challenges were introduced to encourage consistency.",
-        imageType: "Gamified Engagement Flow"
+        title: "Course Content",
+        description: "Lessons are organized with a focus on readability and structured information architecture.",
+        imageType: "Mobile Screen",
+        image: "/projects/skillify/Courses Content (Bezel).svg"
       },
       {
-        title: "Progress Tracking",
-        description: "A dedicated dashboard helps learners see milestones and monitor performance.",
-        imageType: "Progress Tracking Dashboard"
+        title: "Active Learning",
+        description: "Rich, interactive lesson interfaces designed to sustain engagement and knowledge retention.",
+        imageType: "Mobile Screen",
+        image: "/projects/skillify/My  Course (Bezel).svg"
+      },
+      {
+        title: "Community Experience",
+        description: "Dedicated spaces for peer interaction, discussion, and collaborative learning.",
+        imageType: "Mobile Screen",
+        image: "/projects/skillify/Community Details (Bezel).svg"
       }
     ],
     designSystem: {
