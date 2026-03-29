@@ -156,24 +156,16 @@ export const caseStudies: CaseStudyData[] = [
     approach: "The goal was to create a platform that does more than list vendors. Instead of treating event planning as a search problem, Gaderly was designed as a guided experience. The product helps clients structure their event needs first, then connects them with relevant vendors in a more intentional way. On the client side, the experience focuses on reducing uncertainty. AI-assisted planning helps users define their event, understand what they need, and discover vendors that match their budget, style, and requirements. On the vendor side, the experience focuses on visibility and conversion. Vendors get a clearer way to present their services, manage bookings, and attract more qualified inquiries. Rather than scattering the journey across multiple platforms, Gaderly brings planning, discovery, and booking into one connected flow.",
     keyScreens: [
       {
-        title: "AI-Assisted Planning",
-        description: "Clients enter event details and receive structured guidance, helping them move from vague ideas to a clearer plan.",
-        imageType: "AI-Assisted Planning Flow"
-      },
-      {
-        title: "Vendor Discovery",
-        description: "Users can browse, filter, and discover vendors based on category, needs, and preferences.",
-        imageType: "Vendor Discovery Marketplace"
-      },
-      {
-        title: "Booking Flow",
-        description: "The platform supports a more organized path from inquiry to confirmation, reducing scattered communication.",
-        imageType: "Booking Flow"
-      },
-      {
         title: "Vendor Dashboard",
         description: "Vendors can monitor bookings, activity, and profile performance from one place.",
-        imageType: "Vendor Dashboard Overview"
+        imageType: "Desktop Screen",
+        image: "/projects/gaderly/Dashboard.svg"
+      },
+      {
+        title: "Booking Management",
+        description: "The platform supports a more organized path from inquiry to confirmation, reducing scattered communication.",
+        imageType: "Desktop Screen",
+        image: "/projects/gaderly/Bookings Active page.svg"
       }
     ],
     designSystem: {
@@ -184,7 +176,7 @@ export const caseStudies: CaseStudyData[] = [
     },
     outcome: "Gaderly was designed to reduce the stress and fragmentation that usually comes with planning events. For clients, the platform aims to shorten the path from idea to booking by replacing scattered conversations with a more structured experience. Overall, the product is designed to bring more clarity, trust, and efficiency to both sides of the marketplace.",
     accentColor: "#f43f5e",
-    isMobile: true
+    isMobile: false
   },
   {
     id: "social123",
@@ -201,19 +193,22 @@ export const caseStudies: CaseStudyData[] = [
     approach: "The goal was to design a platform that feels valuable to both sides of the relationship: creators and fans. Rather than treating the product like a simple content feed, the experience was structured around creator visibility, fan engagement, and monetization. The platform needed to help creators present themselves clearly, showcase exclusive content, and guide fans toward deeper support through subscriptions, tips, and gated experiences.",
     keyScreens: [
       {
-        title: "Creator Profile",
-        description: "Designed to help creators present their content, value, and personality in a way that encourages discovery and trust.",
-        imageType: "Creator Profile Experience"
+        title: "Creator Homefeed",
+        description: "A centralized feed designed for visibility, with a focus on high-fidelity content presentation and discovery.",
+        imageType: "Mobile Screen",
+        image: "/projects/social123/Homefeed All Content (Bezel).svg"
       },
       {
-        title: "Premium Access",
-        description: "Content access was structured to clearly separate free and paid experiences.",
-        imageType: "Premium Content Access Flow"
+        title: "Explore Discoveries",
+        description: "Dynamic discovery interface allowing fans to browse across creator categories and interests.",
+        imageType: "Mobile Screen",
+        image: "/projects/social123/Explore (Bezel).svg"
       },
       {
-        title: "Monetization",
-        description: "The platform supports creator earnings through subscriptions, tips, and VIP content.",
-        imageType: "Monetization Flow"
+        title: "Financial Wallet",
+        description: "Seamless monetization and withdrawal system for creators, tracking earnings in real-time.",
+        imageType: "Mobile Screen",
+        image: "/projects/social123/Wallet Card (Bezel).svg"
       }
     ],
     designSystem: {
